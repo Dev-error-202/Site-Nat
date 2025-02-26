@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <link rel="stylesheet" href="Erros.css">
+    <title>CD EMBU</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <!-- LOGO -->
+    <div class="logo-container">
+        <a href="index.html"><img src="img/icone.png" class="logo"></a>
+        <img class="logo1" src="img/logo.png">
+    </div>
+<nav class="navbar-header">
+    <header>
+        <!-- Sidebar -->
+        <div class="content">
+            <button class="open-btn" id="open-btn">☰ Outros</button>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                    SETORES
+                <button class="close-btn" id="close-btn">×</button>
+            </div>
+            <!-- Botões de navegação -->
+           <button class="ofensores-btn" id="ofensores-btn">OFENSORES</button>
+           <button class="rotas-btn" id="rotas-btn">ROTAS POR SETOR</button>
+           <!-- Botão principal para exibir os outros botões -->
+           <button class="toggle-items-btn" id="toggle-detalhamento">DETALHAMENTO DE ERROS</button>
+           <div class="detalhamento-container" id="detalhamento-container" style="display: none;">
+            <!-- Botões para alternar os itens -->
+            <button class="toggle-items-btn" id="toggle-items">MÁQUINA</button>
+            <div class="itemlist" id="itemlist">
+                <a class="item" href="#M">Setor M</a>
+                <a class="item" href="#Y">Setor Y</a>
+                <a class="item" href="#V">Setor V</a>
+                <a class="item" href="#H">Setor H</a>
+            </div>
+            <button class="toggle-items-btn" id="toggle-items2">MEZANINO</button>
+            <div class="itemlist" id="itemlist2">
+                <a class="item" href="#A-X">Setor A-x</a>
+                <a class="item" href="#N-J">Setor N-J</a>
+                <a class="item" href="#W">Setor W</a>
+            </div>
+            <button class="toggle-items-btn" id="toggle-items1">EXTERNO</button>
+            <div class="itemlist" id="itemlist1">
+                <a class="item" href="#D-K-Z">Setor D-K-Z</a>
+            </div>
+        </div>
+    </header>
+    </nav>
+
+    <main class="conteudo">
+        <div class="sugest">
+            SUGESTÃO POR SETOR
+        </div>
+            <img src="/tabelas/sugst.png">
+        <div id="M" class="M">
+            SETOR M
+        </div>
+            <img src="tabelas/Erros_M.png" class="tabelas" id="tabela">
+        <div id="Y" class="Y">
+            SETOR Y
+        </div>
+            <img src="tabelas/Erros_Y.png" class="tabelas" id="tabela">
+        <div id="V" class="V">
+            SETOR V
+        </div>
+            <img src="tabelas/Erros_V.png" class="tabelas" id="tabela">
+         <div id="H" class="H">
+            SETOR H
+        </div>
+            <img src="tabelas/Erros_H.png" class="tabelas" id="tabela">
+         <div id="A-X" class="A-X">
+            SETOR A/X
+        </div>
+            <img src="tabelas/Erros_A-X.PNG" class="tabelas" id="tabela">
+             <div id="W" class="W">
+            SETOR W
+        </div>
+            <img src="tabelas/Erros_w.PNG" class="tabelas" id="tabela">
+             <div id="N-J" class="N-J">
+            SETOR N/J    
+        </div>
+            <img src="tabelas/Erros_N-J.PNG" class="tabelas" id="tabela">
+             <div id="D-K-Z" class="D-K-Z">
+            SETOR D-K-Z
+        </div>
+            <img src="tabelas/Erros_D-K-Z.png" class="tabelas" id="tabela">
+    </main>
+
+    <script src="Rotas.JS"></script>
+
+    <footer>
+        <div class="footer">
+            POWERED BY "Zion_Keim" e "Aécio_silva"
+        </div>
+    </footer>
+
+    <script src="tabela.js"></script>
+</body>
+</html>
