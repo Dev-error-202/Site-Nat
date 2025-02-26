@@ -1,0 +1,58 @@
+{
+    "M": {
+        "11 a 16": "Rota 100% produzida",
+        "17 a 22": "Rota 100% produzida",
+        "23 a 28": "Rota 100% produzida",
+        "29 a 34": "Rota 100% produzida",
+        "35 a 40": "Rota 100% produzida",
+        "42 a 46": "Rota 100% produzida",
+        "47 a 52": "Rota 100% produzida",
+        "53 a 58": "Rota 100% produzida",
+        "59 a 64": "Rota 100% produzida",
+        "65 a 70": "Rota sendo Feita",
+        "71 a 78": "Iniciando Rota",
+        "99": ""
+    },
+    "V": {
+        "11 a 16": "Rota 100% produzida",
+        "17 a 22": "Rota 100% produzida",
+        "23 a 28": "Rota 100% produzida",
+        "29 a 34": "Rota 100% produzida",
+        "35 a 40": "Rota 100% produzida",
+        "42 a 46": "Rota 100% produzida",
+        "47 a 52": "Iniciando Rota",
+        "53 a 58": "",
+        "59 a 64": "",
+        "65 a 70": "",
+        "71 a 78": "",
+        "99": ""
+    },
+    "Y": {
+        "11 a 16": "Rota 100% produzida",
+        "17 a 22": "Rota 100% produzida",
+        "23 a 28": "Rota 100% produzida",
+        "29 a 34": "Rota 100% produzida",
+        "35 a 40": "Rota 100% produzida",
+        "42 a 46": "Rota 100% produzida",
+        "47 a 52": "Rota 100% produzida",
+        "53 a 58": "Rota sendo Feita",
+        "59 a 64": "Iniciando Rota",
+        "65 a 70": "",
+        "71 a 78": "",
+        "99": ""
+    },
+    "H": {
+        "11 a 16": "Rota 100% produzida",
+        "17 a 22": "Rota 100% produzida",
+        "23 a 28": "Rota 100% produzida",
+        "29 a 34": "Rota 100% produzida",
+        "35 a 40": "Rota 100% produzida",
+        "42 a 46": "Rota sendo Feita",
+        "47 a 52": "Iniciando Rota",
+        "53 a 58": "",
+        "59 a 64": "",
+        "65 a 70": "",
+        "71 a 78": "",
+        "99": ""
+    }
+}

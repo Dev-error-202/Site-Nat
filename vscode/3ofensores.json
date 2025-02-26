@@ -1,0 +1,57 @@
+{
+    "sugestao": 606757.0,
+    "escaneado": 604943.0,
+    "nat": 51888.0,
+    "NAT": [
+        617.0,
+        567.0,
+        436.0
+    ],
+    "SEPARAÇÃO": {
+        "sku": [
+            26162.0,
+            404576.0,
+            45086.0
+        ],
+        "descrição": [
+            "*FLUOXETI 20 EMG 30-C1",
+            "ONDANSETR 8MG ALTG 10S",
+            "TANDRILAX 15'S"
+        ],
+        "sugestaoValores": [
+            292.0,
+            448.0,
+            413.0
+        ],
+        "faturada": [
+            0.0,
+            112.0,
+            115.0
+        ],
+        "NAT": [
+            256.0,
+            157.0,
+            133.0
+        ]
+    },
+    "sku": [
+        84295.0,
+        514170.0,
+        16504.0
+    ],
+    "descrição": [
+        "ALDACTONE 25MG 30'S",
+        "ONDIF 8MG 10'S",
+        "*SERTRALI 50 EUG 30-C1"
+    ],
+    "sugestaoValores": [
+        788.0,
+        849.0,
+        705.0
+    ],
+    "faturada": [
+        158.0,
+        280.0,
+        269.0
+    ]
+}
