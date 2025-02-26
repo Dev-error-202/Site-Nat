@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(28, 28, 28);
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilo da logo */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  z-index: 1000;
+  width: 70px;
+  transition: width 0.3s ease, transform 0.3s ease;
+  border-color: rgb(76, 161, 93);
+  border-style: groove;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      width: 100px;
+    }
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+}
+
+.logo1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 200px;
+  color: #fff;
+  font-size: 50px;
+  cursor: context-menu;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .logo1 {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo1 {
+    width: 100px;
+  }
+}
+
+.btn-sidebar {
+  background-color: rgb(28, 28, 28);
+  height: 55px;
+}
+
+/* Botão de abrir sidebar */
+.open-btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgb(244, 179, 111);
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.open-btn:hover {
+  background-color: rgb(168, 155, 145);
+  transform: scale(1.1);
+}
+
+/* Estilo da sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(10, 47, 42);
+  color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.5s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(76, 161, 93);
+  color: white;
+  width: 100%;
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.close-btn {
+  font-size: 20px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.toggle-items-btn,
+.rotas-btn,
+.ofensores-btn {
+  padding: 10px;
+  background-color: rgb(214, 110, 15);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.detalhamento-container {
+  background-color: rgb(10, 47, 42);
+}
+
+.itemlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.itemlist.show {
+  display: flex;
+}
+
+.itemlist .item {
+  background-color: rgb(168, 155, 145);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.itemlist .item:hover {
+  background-color: #555;
+}
+
+/* Quando a sidebar está aberta */
+.sidebar.open {
+  right: 0;
+}
+
+.content.open {
+  margin-right: 250px;
+}
+
+.NAT {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  background-color: rgb(28, 28, 28);
+}
+
+.coluna1,
+.coluna2 {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  min-height: 600px; /* Garantir altura mínima suficiente */
+  padding: 20px;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.coluna1 {
+  background-color: rgb(19, 23, 34);
+  display: flex;
+  flex-direction: column; /* Empilha os itens dentro da coluna */
+  justify-content: flex-start; /* Alinha os itens no topo */
+  min-height: 600px; /* Ajusta a altura mínima para cobrir o conteúdo */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.coluna2 {
+  background-color: rgb(19, 23, 34);
+  background-color: rgb(28, 28, 28);
+  height: auto;
+  margin: 10px;
+}
+
+.resumoNAT {
+  margin-top: 10px;
+  margin-bottom: 10px; /* Reduz a margem inferior para diminuir o espaço */
+  padding: 8px; /* Menor padding */
+  box-shadow: 0 3px 3px 5px rgb(214, 110, 15);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column; /* Organiza os itens em coluna */
+  gap: 10px; /* Espaço entre os itens */
+  max-height: 180px; /* Ajuste o tamanho máximo da div para ela ficar menor */
+  color: #fff; /* Define o texto como branco para todos os elementos dentro da .resumoNAT */
+}
+
+.resumoNAT .item {
+  font-size: 16px; /* Tamanho de fonte maior */
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: rgb(
+    19,
+    23,
+    34
+  ); /* Pode manter o fundo dos itens se quiser */
+}
+
+.sla {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sla p {
+  font-size: 1em; /* Aumenta o tamanho do texto para as previsões */
+  color: #fff; /* Assegura que o texto dentro de .sla também seja branco */
+}
+
+#previsao {
+  font-weight: bold; /* Destaca essas informações */
+}
+
+.tops {
+  font-size: 1.5em; /* Ajusta o tamanho do título para maior */
+  font-weight: bold;
+  color: #fff; /* Garante que o título também seja branco */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .NAT {
+    flex-direction: column;
+  }
+
+  .coluna1,
+  .coluna2 {
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+/* Estilo para o gráfico */
+.grafico {
+  width: 100%;
+  height: 400px;
+  margin-top: 4px;
+  background-color: rgb(19, 23, 34);
+  text-align: start;
+}
+
+/* Estilo do gráfico */
+#graficoLinha {
+  background: rgb(19, 23, 34);
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a seção .info */
+.info {
+  background-color: rgb(28, 28, 28);
+  color: #fff;
+  height: auto;
+}
+
+.info p {
+  display: inline-block;
+  justify-content: space-between;
+  margin: 10px;
+  color: rgb(200, 200, 200); /* Cor de texto mais clara para contraste */
+}
+/* Estilo do container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0;
+  background-color: rgb(28, 28, 28);
+}
+
+/* Estilo do carrossel */
+.carrossel {
+  width: 500px;
+  overflow: hidden;
+  background-color: rgb(28, 28, 28);
+}
+
+/* Estilo para o wrapper de botões dentro do carrossel */
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* Animação do carrossel */
+.carrossel .btns-wrapper {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.carrossel:hover .btns-wrapper {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+/* Estilo para os botões dentro do carrossel */
+.carrossel .btn {
+  background-color: rgb(33, 88, 44);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  white-space: nowrap;
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Estilo para o botão específico com id "NAT" */
+#NAT {
+  background-color: rgb(165, 86, 12);
+}
+
+#NAT:hover {
+  background-color: rgb(100, 95, 95);
+}
+
+/* Efeito de hover nos botões */
+.carrossel .btn:hover {
+  background-color: rgb(100, 95, 95);
+  transform: scale(1.2); /* Botão cresce ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para um efeito 3D */
+}
+
+/* Animação de rotação contínua */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilo para o container de cada conjunto de itens */
+#top1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px; /* Espaçamento superior para dar respiro ao conteúdo */
+  color: #fff;
+  background-color: rgb(28, 28, 28);
+  box-shadow: 0 2px 7px rgb(76, 161, 93);
+  margin: 0 auto;
+  width: 85%;
+  max-width: 100%;
+  height: auto; /* Alterado para auto para se ajustar ao conteúdo */
+  min-height: 400px; /* Garantir altura mínima caso não tenha muitos dados */
+}
+
+/* Estilo para cada linha de dados (SKU, Descrição, Sugestão, Faturada, NAT) */
+#top1 div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 15px;
+  background-color: rgb(28, 28, 28);
+  border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos */
+  margin: 7px 2px 7px;
+  width: 90%;
+  margin-left: 30px;
+}
+
+/* Estilo para cada item dentro da linha */
+#top1 div div {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  flex: 0; /* Cada item ocupa uma parte proporcional da linha */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Estilo quando o usuário passa o mouse por cima */
+#top1 div:hover {
+  transform: translateY(-5px); /* Eleva levemente o item */
+  box-shadow: 0 5px 15px rgb(76, 161, 93); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para o título de cada item (SKU, Descrição, etc.) */
+#top1 div div:first-child {
+  font-weight: bold;
+  color: #1e88e5; /* Cor moderna e vibrante para os títulos */
+}
+
+/* Ajuste para o layout de "Sugestão", "Faturada" e "NAT" */
+#top1 div div:nth-child(2),
+#top1 div div:nth-child(3),
+#top1 div div:nth-child(4),
+#top1 div div:nth-child(5) {
+  color: #fff;
+  font-weight: normal; /* Menos destaque para os valores */
+}
+
+/* Responsividade para telas pequenas (ex. dispositivos móveis) */
+@media (max-width: 768px) {
+  #top1 div {
+    flex-direction: column; /* Empilhar os itens em telas menores */
+    align-items: center; /* Alinha os itens ao centro */
+  }
+
+  #top1 div div {
+    width: 100%; /* Cada item ocupa a largura total da linha */
+    text-align: left; /* Alinhar o texto à esquerda */
+  }
+
+  /* Títulos ficam mais destacados nas telas menores */
+  #top1 div div:first-child {
+    font-size: 16px; /* Aumentar o tamanho da fonte do título */
+  }
+}
+
+.graficos-container {
+  display: flex; /* Usando Flexbox para posicionar os gráficos lado a lado */
+  justify-content: space-between; /* Distribui os gráficos com espaços entre eles */
+  gap: 20px; /* Espaço entre os gráficos */
+  flex-wrap: wrap; /* Permite que os gráficos se empilhem em telas pequenas */
+  padding: 20px; /* Adiciona um padding ao redor do container */
+}
+
+#grafico1,
+#grafico2,
+#grafico3 {
+  flex: 1; /* Faz com que cada gráfico ocupe uma largura igual */
+  max-width: 30%; /* Limita a largura máxima a 30% */
+  min-width: 300px; /* Garante uma largura mínima de 300px */
+  height: 500px; /* Defina uma altura fixa para os gráficos */
+  background-color: rgb(28, 28, 28); /* Adiciona um fundo escuro aos gráficos */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destacar os gráficos */
+  padding: 20px; /* Espaçamento interno para o conteúdo do gráfico */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.footer {
+  text-align: center;
+  color: #1e88e5;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* Contêiner do botão e input de data */
+.calendar-container {
+  display: inline-block;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 5px;
+  background-color: rgb(19, 23, 34);
+}
+
+/* Estilo do botão de calendário */
+.calendar-btn {
+  font-size: 30px; /* Ícone maior */
+  padding: 2;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-color: rgb(76, 161, 93);
+}
+
+/* Estilo do campo de data */
+.calendar-input {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  display: none; /* Começa escondido */
+}
+
+.slider-container {
+  text-align: center;
+  color: #1e88e5;
+  margin-top: 40px;
+  user-select: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
+  appearance: none;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]:focus {
+  background: #ccc;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #1e88e5;
+  border-radius: 50%;
+  cursor: pointer;
+}

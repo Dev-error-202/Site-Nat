@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no">
+    <link rel="stylesheet" href="Erros.css">
+    <title>CD EMBU</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+</head>
+<body>
+
+    <!-- LOGO -->
+    <div class="logo-container">
+        <a href="index.html"><img src="img/icone.png" class="logo"></a>
+        <p class="logo1">RDsaúde</p>
+    </div>
+
+<nav class="navbar-header">
+    <header>
+        <!-- Sidebar -->
+        <div class="content">
+            <button class="open-btn" id="open-btn">☰ Outros</button>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                SETORES
+                <button class="close-btn" id="close-btn">×</button>
+            </div>
+
+             <!-- Botões de navegação -->
+            <button class="ofensores-btn" id="ofensores-btn">OFENSORES</button>
+            <button class="rotas-btn" id="rotas-btn">ROTAS POR SETOR</button>
+        
+            <!-- Botão principal para exibir os outros botões -->
+            <button class="toggle-items-btn" id="toggle-detalhamento">DETALHAMENTO DE ERROS</button>
+            <div class="detalhamento-container" id="detalhamento-container" style="display: none;">
+                
+
+            <!-- Botões para alternar os itens -->
+            <button class="toggle-items-btn" id="toggle-items">MÁQUINA</button>
+            <div class="itemlist" id="itemlist">
+                <a class="item" href="ERROS POR SETOR.html#M">Setor M</a>
+                <a class="item" href="ERROS POR SETOR.html#Y">Setor Y</a>
+                <a class="item" href="ERROS POR SETOR.html#V">Setor V</a>
+                <a class="item" href="ERROS POR SETOR.html#H">Setor H</a>
+            </div>
+            <button class="toggle-items-btn" id="toggle-items2">MEZANINO</button>
+            <div class="itemlist" id="itemlist2">
+                <a class="item" href="ERROS POR SETOR.html#A-X">Setor A-X</a>
+                <a class="item" href="ERROS POR SETOR.html#N-J">Setor N-J</a>
+                <a class="item" href="ERROS POR SETOR.html#W">Setor W</a>
+            </div>
+            <button class="toggle-items-btn" id="toggle-items1">EXTERNO</button>
+            <div class="itemlist" id="itemlist1">
+                <a class="item" href="ERROS POR SETOR.html#D-K-Z">Setor D-K-Z</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <a  href="http://10.6.3.69:8000/Relatorio" >
+            <div id="OFENSORES" class="ofensores">
+                MAIORES OFENSORES
+            </div>
+         </a>
+        <table id="tabela-dados">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Descrição</th>
+                    <th>Setor</th>
+                    <th>Endereço</th>
+                    <th>Sugestão</th>
+                    <th>Unidade Faturada</th>
+                    <th>Unidade NAT</th>
+                    <th>Saldo Inicial</th>
+                    <th>Saldo Case</th>
+                    <th>Status NAT</th>
+                    <th>Status Validado</th>
+                    <th>Saldo Ativo</th>
+                    <th>Quem Validou</th>
+                    <th>Dias recorrentes</th>
+                    <th>NAT Acumulado</th>
+                </tr>
+            </thead id="tabelaId">
+            <tbody>
+                <!-- As linhas da tabela serão preenchidas dinamicamente aqui -->
+            </tbody>
+        </table>
+        <a href="Bases_excel/Nat_Ressuprimento.xlsb" download="Nat_Ressuprimento.xlsb">
+            <div id="ressuprimento" class="ofensores">
+                MAIORES OFENSORES DO RESSUPRIMENTO
+            </div>
+        </a>
+        <table id="tabela-ressuprimento">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Descrição</th>
+                    <th>Setor</th>
+                    <th>Endereço</th>
+                    <th>Sugestão</th>
+                    <th>Unidade Faturada</th>
+                    <th>Unidade NAT</th>
+                    <th>Saldo Inicial</th>
+                    <th>Saldo Case</th>
+                    <th>Status NAT</th>
+                    <th>Status Validado</th>
+                    <th>Saldo Ativo</th>
+                    <th>Quem Validou</th>
+                    <th>Dias recorrentes</th>
+                    <th>NAT Acumulado</th>
+                </tr>
+            </thead id="tabelaId">
+            <tbody>
+                <!-- As linhas da tabela serão preenchidas dinamicamente aqui -->
+            </tbody>
+        </table>
+        <a href="Bases_excel/Nat_Separação.xlsb" download="Nat_Separação.xlsb">
+             <div id="separação" class="ofensores">
+                 MAIORES OFENSORES DA SEPARAÇÃO
+             </div>
+        </a>
+        <table id="tabela-separacao">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Descrição</th>
+                    <th>Setor</th>
+                    <th>Endereço</th>
+                    <th>Sugestão</th>
+                    <th>Unidade Faturada</th>
+                    <th>Unidade NAT</th>
+                    <th>Saldo Inicial</th>
+                    <th>Saldo Case</th>
+                    <th>Status NAT</th>
+                    <th>Status Validado</th>
+                    <th>Saldo Ativo</th>
+                    <th>Quem Validou</th>
+                    <th>Dias recorrentes</th>
+                    <th>NAT Acumulado</th>
+                </tr>
+            </thead id="tabelaId">
+            <tbody>
+                <!-- As linhas da tabela serão preenchidas dinamicamente aqui -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="footer">
+            POWERED BY "Zion_Keim" e "Aécio_silva"
+        </div>
+    </footer>
+
+    <script src="tabela.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(28,28,28);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilo da logo */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  z-index: 1000;
+  width: 70px;
+  transition: width 0.3s ease, transform 0.3s ease;
+  border-color: rgb(76,161,93);
+  border-style: groove;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  background-color: rgb(168,155,145);
+  transform: scale(1.05);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      width: 100px;
+    }
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+}
+
+.logo1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 200px;
+  color: #fff;
+  font-size: 50px;
+  cursor: context-menu;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .logo1 {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo1 {
+    width: 100px;
+  }
+}
+
+/* Botão de abrir sidebar */
+.open-btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgb(244, 179, 111);
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.open-btn:hover {
+  background-color: rgb(168, 155, 145);
+  transform: scale(1.1);
+}
+
+/* Estilo da sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(10, 47, 42);
+  color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.50s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(76, 161, 93);
+  color: white;
+  width: 100%;
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.close-btn {
+  font-size: 20px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.toggle-items-btn, .rotas-btn, .ofensores-btn {
+  padding: 10px;
+  background-color: rgb(214, 110, 15);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.detalhamento-container {
+  background-color: rgb(10, 47, 42);
+}
+
+.itemlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  display: none;
+  background-color: rgb(10, 47, 42);
+}
+
+.itemlist.show {
+  display: flex;
+}
+
+.itemlist .item {
+  background-color: rgb(168, 155, 145);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.itemlist .item:hover {
+  background-color: #555;
+}
+
+/* Quando a sidebar está aberta */
+.sidebar.open {
+  right: 0;
+}
+
+.content.open {
+  margin-right: 250px;
+}
+
+.content {
+  padding: 20px;
+  margin-right: 0;
+  margin-bottom: 70px; /* Ajuste o valor para o tamanho do footer */
+  transition: margin-right 0.3s ease;
+  background-color: rgb(28,28,28);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  padding: 40px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo para a tabela */
+.containerTabelas {
+  display: flex;
+  gap: 10px;
+  margin-top: 10;
+}
+
+table {
+  width: 30%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  overflow: hidden;
+  max-width: 100vw;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+th {
+  background-color: rgb(10, 47, 42);
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+td:hover {
+  background-color: rgb(168, 155, 145);
+  box-shadow: inset 3px 5px 3px 5px rgba(0, 0, 0, 0.2);
+  border-color: gray;
+}
+
+th:hover {
+  background-color: rgb(76, 161, 93);
+}
+
+tfoot {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px;
+}
+
+th, td {
+  padding: 8px;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(28,28,28);
+  color: rgb(76, 161, 93);
+  padding: 5px;
+  font-size: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
