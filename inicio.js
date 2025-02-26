@@ -226,7 +226,7 @@ const criarGraficoConfig = (labels, valores, gradient, nome, nivelMeta) => ({
 // Atualiza o gráfico com base na categoria
 let selectedTime = "07:30";
 const atualizarGrafico_1 = async (categoria) => {
-  const data = await carregarJson(".vscode/Configuracoes_grafico.json");
+  const data = await carregarJson("vscode/Configuracoes_grafico.json");
   if (!data) return;
   categoria = categoria === "DROPS" ? "DROP'S" : categoria;
   const soma = data.GRAFICO[categoria];
@@ -242,7 +242,7 @@ const atualizarGrafico_1 = async (categoria) => {
 
 // Funções de manipulação da tabela
 const carregarTabela = async () => {
-  const data = await carregarJson(".vscode/3ofensores.json");
+  const data = await carregarJson("vscode/3ofensores.json");
   if (!data) return;
 
   document.getElementById(
@@ -320,7 +320,7 @@ window.onload = carregarDadosMaiores;
 // Função para buscar os dados do NAT_setor
 const fetchNATSetor = async () => {
   try {
-    const dados = await carregarJson(".vscode/NAT_setor.json");
+    const dados = await carregarJson("vscode/NAT_setor.json");
     dados_finais = dados;
   } catch (error) {
     console.error("Erro ao carregar NAT_setor.json:", error);
